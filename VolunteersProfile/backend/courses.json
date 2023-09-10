@@ -1,0 +1,278 @@
+{
+  "info": {
+    "_postman_id": "Your_Postman_ID",
+    "name": "API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Courses",
+      "item": [
+        {
+          "name": "List All Courses",
+          "request": {
+            "url": "http://127.0.0.1:8000/courses/",
+            "method": "GET"
+          }
+        },
+        {
+          "name": "Create a Course",
+          "request": {
+            "url": "http://127.0.0.1:8000/courses/",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"title\": \"Course Title\", \"description\": \"Course Description\"}"
+            }
+          }
+        },
+        {
+          "name": "Retrieve a Course",
+          "request": {
+            "url": "http://127.0.0.1:8000/courses/{course_id}/",
+            "method": "GET"
+          }
+        },
+        {
+          "name": "Update a Course",
+          "request": {
+            "url": "http://127.0.0.1:8000/courses/{course_id}/",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"title\": \"Updated Course Title\", \"description\": \"Updated Course Description\"}"
+            }
+          }
+        },
+        {
+          "name": "Delete a Course",
+          "request": {
+            "url": "http://127.0.0.1:8000/courses/{course_id}/",
+            "method": "DELETE"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Playlists",
+      "item": [
+        {
+          "name": "List All Playlists",
+          "request": {
+            "url": "http://127.0.0.1:8000/playlists/",
+            "method": "GET"
+          }
+        },
+        {
+          "name": "Create a Playlist",
+          "request": {
+            "url": "http://127.0.0.1:8000/playlists/",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"title\": \"Playlist Title\", \"description\": \"Playlist Description\", \"course\": \"course_id\"}"
+            }
+          }
+        },
+        {
+          "name": "Retrieve a Playlist",
+          "request": {
+            "url": "http://127.0.0.1:8000/playlists/{playlist_id}/",
+            "method": "GET"
+          }
+        },
+        {
+          "name": "Update a Playlist",
+          "request": {
+            "url": "http://127.0.0.1:8000/playlists/{playlist_id}/",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"title\": \"Updated Playlist Title\", \"description\": \"Updated Playlist Description\", \"course\": \"course_id\"}"
+            }
+          }
+        },
+        {
+          "name": "Delete a Playlist",
+          "request": {
+            "url": "http://127.0.0.1:8000/playlists/{playlist_id}/",
+            "method": "DELETE"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Notes",
+      "item": [
+        {
+          "name": "List All Notes",
+          "request": {
+            "url": "http://127.0.0.1:8000/notes/",
+            "method": "GET"
+          }
+        },
+        {
+          "name": "Create a Note",
+          "request": {
+            "url": "http://127.0.0.1:8000/notes/",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"title\": \"Note Title\", \"content\": \"Note Content\", \"course\": \"course_id\"}"
+            }
+          }
+        },
+        {
+          "name": "Retrieve a Note",
+          "request": {
+            "url": "http://127.0.0.1:8000/notes/{note_id}/",
+            "method": "GET"
+          }
+        },
+        {
+          "name": "Update a Note",
+          "request": {
+            "url": "http://127.0.0.1:8000/notes/{note_id}/",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"title\": \"Updated Note Title\", \"content\": \"Updated Note Content\", \"course\": \"course_id\"}"
+            }
+          }
+        },
+        {
+          "name": "Delete a Note",
+          "request": {
+            "url": "http://127.0.0.1:8000/notes/{note_id}/",
+            "method": "DELETE"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Dashboard",
+      "item": [
+        {
+          "name": "Retrieve User's Dashboard",
+          "request": {
+            "url": "http://127.0.0.1:8000/dashboards/{dashboard_id}/",
+            "method": "GET"
+          }
+        },
+        {
+          "name": "Update User's Dashboard",
+          "request": {
+            "url": "http://127.0.0.1:8000/dashboards/{dashboard_id}/",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"courses\": [\"course_id1\", \"course_id2\"], \"playlists\": [\"playlist_id1\", \"playlist_id2\"], \"notes\": [\"note_id1\", \"note_id2\"], \"videos\": [\"video_id1\", \"video_id2\"]}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Videos",
+      "item": [
+        {
+          "name": "List All Videos",
+          "request": {
+            "url": "http://127.0.0.1:8000/videos/",
+            "method": "GET"
+          }
+        },
+        {
+          "name": "Create a Video",
+          "request": {
+            "url": "http://127.0.0.1:8000/videos/",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"title\": \"Video Title\", \"description\": \"Video Description\", \"course\": \"course_id\"}"
+            }
+          }
+        },
+        {
+          "name": "Retrieve a Video",
+          "request": {
+            "url": "http://127.0.0.1:8000/videos/{video_id}/",
+            "method": "GET"
+          }
+        },
+        {
+          "name": "Update a Video",
+          "request": {
+            "url": "http://127.0.0.1:8000/videos/{video_id}/",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"title\": \"Updated Video Title\", \"description\": \"Updated Video Description\", \"course\": \"course_id\"}"
+            }
+          }
+        },
+        {
+          "name": "Delete a Video",
+          "request": {
+            "url": "http://127.0.0.1:8000/videos/{video_id}/",
+            "method": "DELETE"
+          }
+        }
+      ]
+    }
+  ]
+}
